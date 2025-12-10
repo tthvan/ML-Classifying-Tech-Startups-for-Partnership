@@ -1,8 +1,8 @@
-# Startup–Corporate Partnership Selection with Logistic Regression
+# Startup-Corporate Partnership Selection with Logistic Regression
 
 This project builds a simple, interpretable machine learning pipeline to help companies identify high-potential startup partners using only publicly available data on German digital tech startups.
 
-The project is part of a research collaboration on startup–corporate partnerships and has been:
+The project is part of a research collaboration on startup-corporate partnerships and has been:
 
 - Presented at **2025 IEEE ETECOM25 Conference**, Track “Artificial Intelligence, Machine Learning, and Business Analytics”.
 - Submitted to **Data Science in Finance and Economics (DSFE)** (final stage of peer review).
@@ -11,7 +11,7 @@ The project is part of a research collaboration on startup–corporate partnersh
 
 ## Project Highlights
 
-- Cut data collection and cleaning time by approximately **30–40%** by building web-scraping workflows, turning a multi-week manual task into a repeatable pipeline.  
+- Cut data collection and cleaning time by approximately **30-40%** by building web-scraping workflows, turning a multi-week manual task into a repeatable pipeline.  
 - Improved data quality and consistency across sources, reducing mismatched or conflicting records by approximately **25%** through standardized industry tags, funding stages, hub names, and country labels.  
 - Trained an interpretable **Logistic Regression** model that reached **88.2% accuracy**, **0.80 precision**, and an **F1-score of 0.727** on the balanced dataset.  
 
@@ -31,26 +31,34 @@ This project aims to:
 
 ---
 
-## Dataset Overview
+## Dataset Overview and EDA
 
 The dataset focuses on Germany’s digital tech startup landscape:
 
 - **755 startups**  
 - **53** labeled as “high-potential partners” by the focal company (heavily imbalanced target)  
-- Approximately **82%** explicitly state they are looking for partners  
-- **96.7%** have **fewer than 50 employees**  
-- Strong presence of:
-  - SaaS and software development
-  - Artificial Intelligence (AI)
-  - Data Analytics (DA)
-  - IoT and Smart Systems
-- Only **9.8%** of startups have at least one female founder  
 
 Data was collected from:
 
 - Public startup and ecosystem databases  
 - German digital hub websites  
 - Company and startup pages  
+
+### Exploratory Data Analysis (EDA)
+
+- **1. Descriptive characteristics**
+  - SaaS dominates the sample industries, with 300+ SaaS startups (nearly half), alongside high proportions of AI and Data Analytics.
+  - 96.7% of firms are very small (fewer than 50 employees), and around 40% are in pre-seed or seed funding stages.
+  - Despite their early-stage profile, about 82% of startups explicitly state that they are actively looking for partners rather than prioritising funding (which was often more significant for startups), highlighting the importance of strategic alliances.
+  - Only 9.8% (74 out of 755) of startups have at least one female founder, showing a pronounced gender imbalance in leadership.
+  - Only 53 startups are labeled as “high-potential” by the focal company, underscoring the strong class imbalance in the target variable.
+
+- **2 – Hub affiliations of startups**
+  - Hub Frankfurt/Darmstadt hosts the largest number of startups (140+), reflecting its role as a major financial, educational, and innovation centre.
+
+- **3. Geographic distribution and hubs**
+  - Maps the spatial distribution of startups and their associated hubs across Germany.
+  - Startups tend to cluster around key hubs, suggesting that government-backed digital hubs and ecosystems play a significant role in boosting entrepreneurial activity.
 
 ---
 
@@ -127,7 +135,7 @@ Technological capabilities are central to how this company screens partners. Whi
 The funding stage variable is positive and significant:
 
 - Later-stage startups are several times more likely to be classified as high-potential than those in pre-seed or seed.  
-- Within the earliest phases (pre-seed, seed), only about **23–26%** of startups are labeled high-potential (after resampling).  
+- Within the earliest phases (pre-seed, seed), only about **23-26%** of startups are labeled high-potential (after resampling).  
 - For later funding stages, this proportion at least doubles.
 
 **Interpretation:**  
@@ -140,7 +148,7 @@ The company places clear emphasis on financial maturity and prior validation. In
 Distance between the startup and the focal company has a strong negative effect:
 
 - Increasing distance sharply reduces the probability of being classified as high-potential.  
-- Beyond roughly **200 km**, only about **6–7%** of startups are selected as suitable candidates.  
+- Beyond roughly **200 km**, only about **6-7%** of startups are selected as suitable candidates.  
 - When mapped, most promising startups cluster within approximately 200 km of the focal company and are predominantly located within Germany.
 
 **Interpretation:**  
