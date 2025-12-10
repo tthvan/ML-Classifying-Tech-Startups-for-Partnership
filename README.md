@@ -54,7 +54,7 @@ Data was collected from:
   - Only 53 startups are labeled as “high-potential” by the focal company, underscoring the strong class imbalance in the target variable.
 
 <p align="center">
-  <img src="https://github.com/tthvan/ML-Classifying-Tech-Startups-for-Partnership/blob/main/Charts/Figure%201.%20Descriptive%20Statistics.png?raw=true" width="400">
+  <img src="https://github.com/tthvan/ML-Classifying-Tech-Startups-for-Partnership/blob/main/Charts/Figure%201.%20Descriptive%20Statistics.png?raw=true" width="700">
 </p>
 
 - **2 – Hub affiliations of startups**
