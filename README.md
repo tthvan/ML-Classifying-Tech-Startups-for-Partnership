@@ -53,12 +53,24 @@ Data was collected from:
   - Only 9.8% (74 out of 755) of startups have at least one female founder, showing a pronounced gender imbalance in leadership.
   - Only 53 startups are labeled as “high-potential” by the focal company, underscoring the strong class imbalance in the target variable.
 
+<p align="center">
+  <img src="https://github.com/tthvan/ML-Classifying-Tech-Startups-for-Partnership/blob/main/Charts/Figure%201.%20Descriptive%20Statistics.png?raw=true" width="400">
+</p>
+
 - **2 – Hub affiliations of startups**
   - Hub Frankfurt/Darmstadt hosts the largest number of startups (140+), reflecting its role as a major financial, educational, and innovation centre.
+
+<p align="center">
+  <img src="https://github.com/tthvan/ML-Classifying-Tech-Startups-for-Partnership/blob/main/Charts/Figure%202.%20Hub%20Affiliations%20of%20Startups.jpg?raw=true" width="700">
+</p>
 
 - **3. Geographic distribution and hubs**
   - Maps the spatial distribution of startups and their associated hubs across Germany.
   - Startups tend to cluster around key hubs, suggesting that government-backed digital hubs and ecosystems play a significant role in boosting entrepreneurial activity.
+
+<p align="center">
+  <img src="https://github.com/tthvan/ML-Classifying-Tech-Startups-for-Partnership/blob/main/Charts/Figure%203.%20Distribution%20of%20High-Potential%20Startups%20(red%20data%20points)%20around%20Company%20A.jpg?raw=true" width="700">
+</p>
 
 ---
 
