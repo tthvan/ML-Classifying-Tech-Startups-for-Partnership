@@ -4,8 +4,8 @@ This project builds a simple, interpretable machine learning pipeline to help co
 
 The project is part of a research collaboration on startup–corporate partnerships and has been:
 
-- Presented at **2025 IEEE International Conference on Emerging Trends in Engineering and Computing (ETECOM25)**, Track “Artificial Intelligence, Machine Learning, and Business Analytics”.
-- Submitted to **Data Science in Finance and Economics** (final stage of peer review).
+- Presented at **2025 IEEE ETECOM25 Conference**, Track “Artificial Intelligence, Machine Learning, and Business Analytics”.
+- Submitted to **Data Science in Finance and Economics (DSFE)** (final stage of peer review).
 
 ---
 
@@ -21,7 +21,7 @@ The project is part of a research collaboration on startup–corporate partnersh
 
 Traditional methods for identifying strategic partners often rely on human judgment and informal networks. This can lead to:
 
-- Biased, opaque selection criteria  
+- Biased selection criteria  
 - Missed opportunities outside existing networks  
 - Slow, manual screening when the candidate pool is large  
 
@@ -52,11 +52,9 @@ Data was collected from:
 - German digital hub websites  
 - Company and startup pages  
 
-Custom web-scraping workflows were used to automate collection and reduce manual work.
-
 ---
 
-## Methods (Short Overview)
+## Methods Overview
 
 ### 1. Data Collection and Cleaning
 
@@ -79,18 +77,18 @@ Key feature groups:
 - **Funding stage**  
   - Pre-seed, seed, early, later-stage funding  
 - **Geographic distance**  
-  - Approximate distance between startup and focal company (binned)  
+  - Approximate distance between startup and focal company
 - **Business model**  
-  - B2B vs B2C  
+  - B2B vs B2C vs Both
 - **Hub affiliation**  
   - Membership in Germany’s digital innovation hubs  
 - **Founders’ structure**  
-  - Including percentage of female founders  
+  - Including percentage of female vs male founders  
 
 ### 3. Labeling and Imbalance Handling
 
 - Positive class: startups previously selected as “high-potential” partners by the company.  
-- Negative class: generated using heuristic clustering on unselected startups.  
+- Negative class: dictated using heuristic clustering on unselected startups.  
 - Applied **SMOTE** to oversample the minority class and mitigate class imbalance.
 
 ### 4. Model
@@ -110,9 +108,9 @@ Final model performance on the balanced dataset:
 
 ---
 
-## Key Insights
+## Key Insights - Key Drivers
 
-### 1. Technology Prowess is the Dominant Driver
+### 1. Technology Prowess 
 
 Features capturing technology focus (especially IoT/Smart Systems and AI/Data Analytics) have the highest odds ratios in the logistic regression model.
 
@@ -124,7 +122,7 @@ Technological capabilities are central to how this company screens partners. Whi
 
 ---
 
-### 2. Funding Stage Strongly Influences Perceived Potential
+### 2. Funding Stage 
 
 The funding stage variable is positive and significant:
 
@@ -137,7 +135,7 @@ The company places clear emphasis on financial maturity and prior validation. In
 
 ---
 
-### 3. Geographic Proximity Still Matters
+### 3. Geographic Proximity
 
 Distance between the startup and the focal company has a strong negative effect:
 
@@ -150,7 +148,7 @@ Despite the digital nature of the industry, physical proximity remains important
 
 ---
 
-### 4. Business Model Fit is Critical
+### 4. Business Model Fit 
 
 The business model variable (B2B vs B2C) is also significant:
 
@@ -162,17 +160,17 @@ Customer-type alignment is a key part of early screening. Even a strong technolo
 
 ---
 
-### 5. Gender of Founders is Not a Decisive Factor in the Multivariate Model
+### 5. Gender of Founders is Not a Decisive Factor 
 
 - The percentage of female founders shows strong association with the target variable when considered alone.  
 - However, once other variables (technology, funding, geography, business model) are included, its effect is no longer statistically significant.
 
 **Interpretation:**  
-In this specific study, gender composition does not independently drive selection once core strategic and structural factors are taken into account, even though male leaders dominate the dataset.
+In this specific study, gender composition does not independently drive selection once core strategic and other factors are taken into account, even though male leaders dominate the market.
 
 ---
 
-### 6. Hubs and Ecosystems Provide Indirect Advantages
+### 6. Hubs and Ecosystems Have Indirect Advantages
 
 - Hubs like Frankfurt/Darmstadt host large concentrations of startups and act as important innovation centers.  
 - The Karlsruhe AI hub shows a large coefficient but becomes statistically unstable once direct technology features are added.
@@ -189,7 +187,7 @@ For startups:
 - Emphasize key technologies that align with potential partners’ needs (such as IoT, AI, or Data Analytics in this case).  
 - Make funding stage and financial stability easy to understand.  
 - Clarify business model fit (e.g., B2B vs B2C) when approaching corporate partners.  
-- Prioritize outreach to corporates within a reasonable geographic radius.
+- Prioritize reaching to corporates within a reasonable geographic radius.
 
 For companies and SMEs:
 
